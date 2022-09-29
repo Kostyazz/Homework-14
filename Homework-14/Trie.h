@@ -9,7 +9,7 @@
 
 using namespace std;
 const int ALPHABET_SIZE = 26;
-const int MAX_COMPLETE_COUNT = 5;
+const int MAX_COMPLETE_COUNT = 10;
 
 class Trie
 {

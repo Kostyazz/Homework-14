@@ -74,6 +74,10 @@ vector<string> Trie::autoComplete(string text)
 	transform(text.begin(), text.end(), text.begin(), ::tolower);
 	vector<string> answer;
 	Node* current = findText(text);
+	if (!current) {
+		answer.push_back("Text not found in dictionary");
+		return answer;
+	}
 	int count = 0;
 	queue<Node*> qn;
 	queue<string> qs;
