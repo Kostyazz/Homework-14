@@ -1,4 +1,5 @@
 #include "Trie.h"
+#include <exception>
 
 
 Trie::Node::Node() :isEndOfWord(false)
@@ -44,7 +45,7 @@ void Trie::initialize(string filename)
 	fstream file;
 	file.open(filename, ios::in);
 	if (!file) {
-		throw exception("ERROR: dictionary file not found");
+		throw runtime_error("ERROR: dictionary file not found");
 	} else {
 		while (!file.eof()) {
 			string word;
